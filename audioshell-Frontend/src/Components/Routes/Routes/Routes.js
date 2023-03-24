@@ -5,7 +5,7 @@ import Login from '../../Authentication/Login/Login';
 import Signup from '../../Authentication/Signup/Signup';
 import AddNew from '../../Book/Add/AddNew';
 import Home from './../../Home/Home';
-import Profile from '../../Profile/Profile';
+import { Link, useHistory } from "react-router-dom";
 const Router = createBrowserRouter([
   {
     path: "/",
@@ -27,10 +27,6 @@ const Router = createBrowserRouter([
       {
         path: "/addnew",
         element: <AddNew />,
-      },
-      {
-        path: "/profile",
-        element: <Profile />,
       },
     ],
   },
