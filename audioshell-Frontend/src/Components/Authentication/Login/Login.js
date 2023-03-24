@@ -1,11 +1,10 @@
 import React, { useEffect, useState, Switch } from "react";
-import { Link, useNavigate} from "react-router-dom";
+import { Link, Router, Route, useLocation, Navigate } from "react-router-dom";
 import AddNew from "../../Book/Add/AddNew";
 
 
 function Login() {
-
-  const navigate = useNavigate();
+  const location = useLocation();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loggedIn, setLoggedIn] = useState(false);
@@ -40,9 +39,11 @@ function Login() {
         setLoggedIn(true);
         if(data == "HAHA")
         {
-          // console.log(data);
-          alert("Welcome Honourable Client");
-          navigate('/addnew');
+          console.log(data);
+          alert(data);
+          return (
+            <Navigate to="/" state={{ from: location }} replace></Navigate>
+          );
         }
       } else {
         setError(data.message);
