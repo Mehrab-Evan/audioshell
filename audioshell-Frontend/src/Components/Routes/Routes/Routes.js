@@ -5,7 +5,7 @@ import Login from '../../Authentication/Login/Login';
 import Signup from '../../Authentication/Signup/Signup';
 import AddNew from '../../Book/Add/AddNew';
 import Home from './../../Home/Home';
-import { Link, useHistory } from "react-router-dom";
+import Dashboard from '../../Book/Dashboard/Dashboard';
 const Router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +23,10 @@ const Router = createBrowserRouter([
       {
         path: "/signup",
         element: <Signup />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
       },
       {
         path: "/addnew",
