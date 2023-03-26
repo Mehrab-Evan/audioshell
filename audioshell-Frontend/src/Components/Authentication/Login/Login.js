@@ -58,14 +58,16 @@ function Login() {
     <div className="">
       <div className="hero min-h-screen bg-base-100">
         <div className="hero-content w-[450px] flex-col lg:flex-row-reverse">
-          <div className="card w-full shadow-2xl bg-base-100">
+          <div className="card w-full shadow-2xl border border-slate-700 bg-base-100">
             <div className="card-body">
               <div className="text-center lg:text-left">
-                <h1 className="text-5xl font-bold text-center">Login</h1>
+                <h1 className="text-5xl font-bold text-center text-[#5865F2]">
+                  Login
+                </h1>
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Email</span>
+                  {/* <span className="label-text">Email</span> */}
                 </label>
                 <input
                   placeholder="Email"
@@ -79,7 +81,7 @@ function Login() {
               </div>
               <div className="form-control">
                 <label className="label">
-                  <span className="label-text">Password</span>
+                  {/* <span className="label-text">Password</span> */}
                 </label>
                 <input
                   placeholder="Password"
@@ -97,7 +99,9 @@ function Login() {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary" onClick={handleSubmit}>Login</button>
+                <button className="btn bg-[#5865F2]" onClick={handleSubmit}>
+                  Login
+                </button>
               </div>
             </div>
           </div>
